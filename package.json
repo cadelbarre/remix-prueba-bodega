@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix build && run-p \"dev:*\"",
+    "dev:node": "cross-env NODE_ENV=development nodemon ./server.js --watch ./server.js",
+    "dev:remix": "remix watch",
+    "start": "cross-env NODE_ENV=production node ./server.js",
+    "server": "npx nexe -i server.js -r [./build/**/*, ./public/build/**/*] -o servidor.exe -t windows-x64-12.18.2",
+    "server:prueba": "npx nexe -i server.js -o servidor.exe -t windows-x64-12.18.2"
+  },
+  "dependencies": {
+    "@remix-run/express": "1.7.3",
+    "@remix-run/node": "1.7.3",
+    "@remix-run/react": "1.7.3",
+    "compression": "1.7.4",
+    "cross-env": "7.0.3",
+    "express": "4.18.1",
+    "form-data": "^4.0.0",
+    "isbot": "3.5.4",
+    "morgan": "1.10.0",
+    "mysql2": "2.3.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sweetalert2": "11.6.2",
+    "sweetalert2-react-content": "5.0.5",
+    "zod": "3.19.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "1.7.3",
+    "@remix-run/eslint-config": "1.7.3",
+    "eslint": "8.23.1",
+    "nexe": "4.0.0-rc.1",
+    "nodemon": "2.0.19",
+    "npm-run-all": "4.1.5",
+    "standard": "17.0.0"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

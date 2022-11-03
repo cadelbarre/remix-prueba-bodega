@@ -1,0 +1,59 @@
+@media print {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  nav.navbar {
+    display: none;
+  }
+
+  main section.section.pb-0 {
+    display: none;
+  }
+
+  article {
+    padding-inline: 30px;
+  }
+
+  article.columns .column {
+    padding-bottom: 5px;
+  }
+
+  table#productList :is(tbody, thead) {
+    font-size: 9.3px;
+  }
+
+  table#productList tbody {
+    font-weight: 600;
+  }
+
+
+  table#productList {
+    margin-bottom: 0;
+  }
+
+  :is(table#productList,
+    footer table) :is(tbody tr td, thead tr th) {
+    padding: 0.2em 0.5em;
+  }
+
+  p {
+    font-size: 11px;
+  }
+
+  p.is-size-5 {
+    font-size: 12px !important;
+  }
+
+  #printDocument section.section {
+    padding: 0;
+  }
+
+  footer {
+    margin-top: 5px;
+  }
+
+  footer table :is(tbody, thead) {
+    font-size: 11px;
+  }
+}
